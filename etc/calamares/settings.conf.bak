@@ -5,6 +5,12 @@
 modules-search: [ local ]
 
 instances:
+- id:       drivers
+  module:   netinstall
+  config:   net_drivers.conf
+- id:       software
+  module:   netinstall
+  config:   net_software.conf
 - id:       base
   module:   shellprocess
   config:   shellprocess-base.conf
@@ -23,6 +29,8 @@ instances:
 sequence:
 - show:
   - welcome
+#  - netinstall@drivers
+#  - netinstall@software
   - locale
   - keyboard
   - partition
@@ -40,21 +48,25 @@ sequence:
   - localecfg
   - luksbootkeyfile
   - luksopenswaphookcfg
-#  - shellprocess@first
-  - initcpiocfg
-  - initcpio
-#  - mkinitcpio
+#  - netinstall@drivers
+#  - packages@drivers
+#  - netinstall@software
+#  - shellprocess
+#  - initcpiocfg
+#  - initcpio
   - removeuser
   - users
   - displaymanager
   - networkcfg
   - hwclock
   - services-systemd
-  - grubcfg
-  - bootloader
+#  - packages
+#  - packages@software
+#  - grubcfg
+#  - bootloader
   - shellprocess
   - preservefiles
-  - umount
+#  - umount
 - show:
   - finished
 
