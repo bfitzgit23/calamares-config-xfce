@@ -253,4 +253,36 @@ else
     # Don't exit with error - let the system try to boot
     exit 0
 fi
+# (Previous parts of script remain the same until the final verification)
 
+# Unmount virtual filesystems in reverse order
+log "Unmounting virtual filesystems..."
+umount -l /sys/firmware/efi/efivars 2>/dev/null || log "Note: efivarfs not mounted or busy"
+umount -l /dev 2>/dev/null || log "Note: devtmpfs not mounted or busy"
+umount -l /sys 2>/dev/null || log "Note: sysfs not mounted or busy"
+umount -l /proc 2>/dev/null || log "Note: proc not mounted or busy"
+
+# Final verification
+ERRORS=0
+for file in "${CHECK_FILES[@]}"; do
+    if [ ! -f "$file" ]; then
+        ERRORS=$((ERRORS+1))
+    fi
+done
+
+# Sync filesystems before exit
+log "Syncing filesystems..."
+sync
+
+if [ $ERRORS -eq 0 ]; then
+    log "Post-installation completed successfully"
+    # Give processes a moment to finish
+    sleep 2
+    exit 0
+else
+    log "Post-installation completed with $ERRORS errors"
+    # Give processes a moment to finish
+    sleep 2
+    # Don't exit with error - let the system try to boot
+    exit 0
+fi
