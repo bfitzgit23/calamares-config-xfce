@@ -17,6 +17,8 @@
  name=$(ls -1 /home)
  REAL_NAME=/home/$name
 
+genfstab -U / > /etc/fstab
+
 #cp /cinnamon-configs/cinnamon-stuff/bin/* /bin/
 #cp /cinnamon-configs/cinnamon-stuff/usr/bin/* /usr/bin/
 #cp -r /cinnamon-configs/cinnamon-stuff/usr/share/* /usr/share/
@@ -26,7 +28,7 @@ mkdir /home/$name/.config/nemo
 
 #cp -r /cinnamon-configs/cinnamon-stuff/nemo/* /home/$name/.config/nemo
 
-#cp -r /cinnamon-configs/cinnamon-stuff/.config/* /home/$name/.config/
+cp -r /cinnamon-configs/cinnamon-stuff/.config/* /home/$name/.config/
 
 mkdir /home/$name/.config/autostart
 
