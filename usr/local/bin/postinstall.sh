@@ -17,9 +17,9 @@
  name=$(ls -1 /home)
  REAL_NAME=/home/$name
 
-cp /cinnamon-configs/cinnamon-stuff/bin/* /bin/
-cp /cinnamon-configs/cinnamon-stuff/usr/bin/* /usr/bin/
-cp -r /cinnamon-configs/cinnamon-stuff/usr/share/* /usr/share/
+#cp /cinnamon-configs/cinnamon-stuff/bin/* /bin/
+#cp /cinnamon-configs/cinnamon-stuff/usr/bin/* /usr/bin/
+#cp -r /cinnamon-configs/cinnamon-stuff/usr/share/* /usr/share/
 
 mkdir /home/$name/.config
 mkdir /home/$name/.config/nemo
