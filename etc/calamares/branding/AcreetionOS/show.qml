@@ -33,7 +33,7 @@ Presentation
         anchors.verticalCenterOffset: 0
         Image {
             id: background1
-            source: "slide1.png"
+            source: "logo.png"
             width: 900; height: 506
             verticalAlignment: Image.AlignTop
             fillMode: Image.Stretch

@@ -21,9 +21,9 @@ strings:
     bootloaderEntryName: AcreetionOS
 
 images:
-    productLogo:         "squid.png"
-    productIcon:         "squid.png"
-    productWelcome:      "Welcome.png"
+    productLogo:         "logo.png"
+    productIcon:         "logo.png"
+    productWelcome:      "logo.png"
 
 uploadServer :
     type :    "fiche"
