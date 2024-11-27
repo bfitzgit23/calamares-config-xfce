@@ -1,0 +1,40 @@
+---
+componentName:  Acreetion-OS
+
+welcomeStyleCalamares:   false
+
+welcomeExpandingLogo:   true
+
+windowExpanding:    noexpand
+windowSize: 1280px,720px
+windowPlacement: center
+
+sidebar: qml,top
+
+strings:
+    productName:         Acreetion-OS
+    shortProductName:    Acreetion-OS
+    version:             Vida
+    shortVersion:        Vida
+    versionedName:       Acreetion-OS
+    shortVersionedName:  Acreetion-OS
+    bootloaderEntryName: Acreetion-OS
+
+images:
+    productLogo:         "squid.png"
+    productIcon:         "logo.png"
+    productWelcome:      "languages.png"
+
+uploadServer :
+    type :    "fiche"
+    url :     "http://termbin.com:9999"
+    sizeLimit : -1
+
+slideshow:               "show.qml"
+
+slideshowAPI: 1
+
+style:
+   SidebarBackground:    "#31313a"
+   SidebarText:          "#FFFFFF"
+   SidebarBackgroundCurrent: "#ebe0c9"
