@@ -1,21 +1,8 @@
-- name: "Device Support Applications"
-  description: "Installs Device Applications"
-  critical: false
-  hidden: false
-  selected: false
-  expanded: false
-  packages:
-    - solaar
-    - xboxdrv
-    - optimus-manager
-    - optimus-manager-qt
-    - asusctl
-    - supergfxctl
 - name: "Extra TTF Fonts"
   description: "Installs Additional Fonts"
   critical: false
   hidden: true
-  selected: trie
+  selected: true
   expanded: false
   packages:
     - ttf-anonymous-pro
@@ -44,40 +31,24 @@
   critical: false
   hidden: false
   selected: false
-  expanded: false
+  expanded: true
   packages:
-    - geforcenow-electron
     - lutris
     - steam
     - steam-native-runtime
-    - wine-staging
-    - wine
-    - protonup-qt
-  subgroups:
-   - name: gamemode
-     description: Gamemode and support files
-     subgroups:
-      - name: gamemode-hidden
-        description: gamemode-hidden
-        hidden: true
-        selected: true
-        packages:
-         - gamemode-git
-         - lib32-gamemode
-- name: "Other Software"
-  description: "Other Software"
+- name: "Software"
+  description: "Software"
   critical: false
   hidden: false
   selected: false
   expanded: true
   packages:
-
    - obs-studio
    - v4l2loopback-dkms
    - v4l2loopback-utils
-   - kdenlive
-   - touchegg
-     
+   - vesktop
+   - discord
+   - libreoffice
 - name: "VirtualBox"
   description: "Installs VirtualBox"
   critical: false
@@ -109,6 +80,8 @@
     - seahorse
     - yay-bin
     - pamac-aur-git
+    - firefox
+    - gnome-calculator
 - name: "nvidia"
   description: "Install NVidia Drivers"
   critical: false
