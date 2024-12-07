@@ -14,8 +14,8 @@
 - name: "Extra TTF Fonts"
   description: "Installs Additional Fonts"
   critical: false
-  hidden: false
-  selected: false
+  hidden: true
+  selected: trie
   expanded: false
   packages:
     - ttf-anonymous-pro
@@ -88,14 +88,13 @@
     - virtualbox
     - virtualbox-host-dkms
     - virtualbox-guest-utils
-- name: "Cinnamon Configs"
+- name: "Acreetoin Loaded Software"
   description: "Cinnamon Config files"
   critical: false
-  hidden: false 
+  hidden: true
   selected: true
   expanded: false
   packages:
-    - cinnamon-configs
     - fastfetch
     - nano 
     - webapp-manager
