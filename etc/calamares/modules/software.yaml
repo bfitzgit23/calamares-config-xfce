@@ -101,3 +101,21 @@
     - vlc
     - loupe
     - xarchiver
+    - timeshift
+    - pkunzip
+    - pamac-aur-git
+    - gedit
+    - gnome-disk-utility
+    - seahorse
+    - yay-bin
+    - pamac-aur-git
+- name: "nvidia"
+  description: "Install NVidia Drivers"
+  critical: false
+  hidden: false
+  selected: false
+  expanded: true
+  packages:
+    - nvidia-dkms
+    - nvidia-settings
+
