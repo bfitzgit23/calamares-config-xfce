@@ -49,6 +49,15 @@
    - vesktop
    - discord
    - libreoffice
+- name: "Browsers"
+  description: "Browsers"
+  critical: false
+  hidden: false
+  selected: false
+  expanded: true
+  packages:
+   - google-chrome
+   - brave-bin
 - name: "VirtualBox"
   description: "Installs VirtualBox"
   critical: false
@@ -82,7 +91,8 @@
     - pamac-aur-git
     - firefox
     - gnome-calculator
-- name: "nvidia"
+    - gnome-system-monitor
+- name: "Graphic's Cards""
   description: "Install NVidia Drivers"
   critical: false
   hidden: false
@@ -91,4 +101,5 @@
   packages:
     - nvidia-dkms
     - nvidia-settings
-
+    - intel-compute-runtime
+    - intel-media-driver
