@@ -92,7 +92,7 @@
     - firefox
     - gnome-calculator
     - gnome-system-monitor
-- name: "Graphic's Cards""
+- name: "Graphic's Cards"
   description: "Install NVidia Drivers"
   critical: false
   hidden: false
