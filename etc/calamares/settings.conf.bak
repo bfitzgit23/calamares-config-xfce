@@ -1,3 +1,4 @@
+# Configuration file fory Calamares
 # Configuration file for Calamares
 # Syntax is YAML 1.2
 ---
@@ -30,7 +31,7 @@ sequence:
 - show:
   - welcome
 #  - netinstall@drivers
-#  - netinstall@software
+  - netinstall@software
   - locale
   - keyboard
   - partition
@@ -41,6 +42,7 @@ sequence:
   - mount
   - unpackfs@rootfs
   - unpackfs@vmlinuz
+  - networkcfg
   - machineid
   - fstab
   - locale
@@ -48,25 +50,23 @@ sequence:
   - localecfg
   - luksbootkeyfile
   - luksopenswaphookcfg
-#  - netinstall@drivers
-#  - packages@drivers
-#  - netinstall@software
-#  - shellprocess
-#  - initcpiocfg
-#  - initcpio
-  - removeuser
+#  - shellprocess@first
+  - initcpiocfg
+  - initcpio
+  - shellprocess@first
+  - netinstall@software
+  - packages
   - users
   - displaymanager
-  - networkcfg
+#  - networkcfg
   - hwclock
   - services-systemd
 #  - packages
-#  - packages@software
-#  - grubcfg
-#  - bootloader
+  - grubcfg
+  - bootloader
   - shellprocess
   - preservefiles
-#  - umount
+  - umount
 - show:
   - finished
 
