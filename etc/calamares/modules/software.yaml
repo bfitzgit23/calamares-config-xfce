@@ -83,7 +83,7 @@
     - loupe
     - xarchiver
     - timeshift
-    - pkunzip
+    - unzip
     - pamac-aur-git
     - gedit
     - gnome-disk-utility
