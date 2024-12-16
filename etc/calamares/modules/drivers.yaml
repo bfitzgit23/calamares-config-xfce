@@ -1,9 +1,18 @@
+- name: "Kernel 5-15"
+  description "Older Kernel for older machines"
+  critical: false
+  hidden: false
+  selected: false
+  expanded: tue
+  packages:
+    - linux-lts515
+    - linux-lts515-headers
 - name: "Latest Linux Kernel"
   description: "Installs the latest Linux Kernel"
   critical: false
   hidden: false
   selected: false
-  expanded: false
+  expanded: true
   packages:
     - linux
     - linux-headers
@@ -12,7 +21,7 @@
   critical: false
   hidden: false
   selected: false
-  expanded: false
+  expanded: true
   packages:
     - linux-lts
     - linux-lts-headers
@@ -21,7 +30,7 @@
   critical: false
   hidden: false
   selected: false
-  expanded: false
+  expanded: true
   packages:
     - linux-zen
     - linux-zen-headers
