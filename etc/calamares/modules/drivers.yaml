@@ -1,5 +1,5 @@
 - name: "Kernel 5-15"
-  description "Older Kernel for older machines"
+  description: "Older Kernel for older machines"
   critical: false
   hidden: false
   selected: false
@@ -137,7 +137,7 @@
   critical: false
   hidden: false
   selected: false
-  expanded: false
+  expanded: true
   packages:
     - intel-ucode
 - name: "Amd-ucode (microcode)"
@@ -145,6 +145,6 @@
   critical: false
   hidden: false
   selected: false
-  expanded: false
+  expanded: true
   packages:
     - amd-ucode
