@@ -96,3 +96,32 @@ QPushButton#aboutButton { qproperty-icon: url(:/data/images/release.svg); }
 #licenseItem {  }
 #licenseItemFullText {  }
 */
+
+/* Existing styles might be here */
+
+/* Package/Module Selection Styles */
+QTreeView {
+    font-size: 18pt;
+    color: #000000;         /* Text color */
+    padding: 5px;
+    margin: 2px;
+}
+
+QListView {
+    font-size: 18pt;
+    color: #000000;         /* Text color */
+    padding: 5px;
+    margin: 2px;
+}
+
+QComboBox {
+    font-size: 18pt;
+    color: #000000;         /* Text color */
+    padding: 5px;
+    margin: 2px;
+}
+
+/* If you want to specifically target the package selection module */
+#packagechooserq {
+    font-size: 18pt;
+}
