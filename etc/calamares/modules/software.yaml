@@ -36,7 +36,7 @@
     - lutris
     - steam
     - steam-native-runtime
-- name: "Software"
+- name: "Install Other Software"
   description: "Software"
   critical: false
   hidden: false
@@ -93,14 +93,3 @@
     - firefox
     - gnome-calculator
     - gnome-system-monitor
-- name: "Graphic's Cards"
-  description: "Install NVidia Drivers"
-  critical: false
-  hidden: false
-  selected: false
-  expanded: true
-  packages:
-    - nvidia-dkms
-    - nvidia-settings
-    - intel-compute-runtime
-    - intel-media-driver
