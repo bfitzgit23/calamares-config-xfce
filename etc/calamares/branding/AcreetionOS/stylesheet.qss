@@ -121,46 +121,6 @@ QComboBox {
     margin: 2px;
 }
 
-
-QCheckBox {
-    spacing: 5px;
-    color: #ffffff;
-}
-
-QCheckBox::indicator {
-    width: 16px;
-    height: 16px;
-    border: 1px solid #ffffff;
-    border-radius: 3px;
-    background-color: transparent;
-}
-
-QCheckBox::indicator:unchecked {
-    background-color: transparent;
-}
-
-QCheckBox::indicator:unchecked:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-QCheckBox::indicator:checked {
-    background-color: transparent;
-    image: url(/path/to/check-white.svg);
-}
-
-QCheckBox::indicator:checked:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-QCheckBox::indicator:disabled {
-    border-color: #666666;
-    background-color: transparent;
-}
-
-/* Optional: Style for focused checkboxes */
-QCheckBox::indicator:focus {
-    border: 2px solid #ffffff;
-}
 /* If you want to specifically target the package selection module */
 #packagechooserq {
     font-size: 14pt;
@@ -228,3 +188,54 @@ QLabel {
 #fileSystemComboBox {
     font-size: 14pt;
 }
+
+/* Save this as style.qss in /etc/calamares/branding/yourbrand/ */
+
+QCheckBox {
+    spacing: 5px;
+    color: #ffffff;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #3daee9;  /* KDE blue color for better visibility */
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: rgba(61, 174, 233, 0.1);  /* Slight blue tint */
+}
+
+QCheckBox::indicator:unchecked:hover {
+    background-color: rgba(61, 174, 233, 0.2);  /* More visible on hover */
+    border-color: #4dc4ff;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #3daee9;
+    border-color: #3daee9;
+    image: url(/path/to/check-white.svg);
+}
+
+QCheckBox::indicator:checked:hover {
+    background-color: #4dc4ff;
+    border-color: #4dc4ff;
+}
+
+QCheckBox::indicator:disabled {
+    border-color: #666666;
+    background-color: transparent;
+}
+
+/* Optional: Style for focused checkboxes */
+QCheckBox::indicator:focus {
+    border-color: #4dc4ff;
+}
+
+/* Save this as check-white.svg */
+/* <?xml version="1.0" encoding="UTF-8"?>
+<svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+ <path d="m13.6 4.4-7.2 7.2-4-4" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+</svg> */
