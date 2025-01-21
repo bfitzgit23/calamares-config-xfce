@@ -1,5 +1,9 @@
 /*
+ * SPDX-FileCopyrightText: no
+ * SPDX-License-Identifier: CC0-1.0
+ */
 
+/*
 A branding component can ship a stylesheet (like this one)
 which is applied to parts of the Calamares user-interface.
 In principle, all parts can be styled through CSS.
@@ -26,373 +30,161 @@ Use gammaray
 
 */
 
+/*** Generic Widgets.
+ *
+ * You can style **all** widgets of a given class by selecting
+ * the class name. Some widgets have specialized sub-selectors.
+ */
 
-/* ########## MAIN APPLICATION WINDOW ########## */
+/*
+QPushButton { background-color: green; }
+*/
 
-#mainApp {
-}
+/*** Main application window.
+ *
+ * The main application window has the sidebar, which in turn
+ * contains a logo and a list of items -- note that the list
+ * can **not** be styled, since it has its own custom C++
+ * delegate code.
+ */
 
-#mainText{
-	font : bold 16px;
-}
+/*
+#mainApp { }
+#sidebarApp { }
+#logoApp { }
+*/
 
-#sidebarApp {
+/*** Welcome module.
+ *
+ * There are plenty of parts, but the buttons are the most interesting
+ * ones (donate, release notes, ...). The little icon image can be
+ * styled through *qproperty-icon*, which is a little obscure.
+ * URLs can reference the QRC paths of the Calamares application
+ * or loaded via plugins or within the filesystem. There is no
+ * comprehensive list of available icons, though.
+ */
 
-}
+/*
+QPushButton#aboutButton { qproperty-icon: url(:/data/images/release.svg); }
+#donateButton,
+#supportButton,
+#releaseNotesButton,
+#knownIssuesButton { qproperty-icon: url(:/data/images/help.svg); }
+*/
 
-#logoApp {
-}
+/*** Partitioning module.
+ *
+ * Many moving parts, which you will need to experiment with.
+ */
 
-#sidebarMenuApp {
-	padding: 3px;
-	background-color: #353945;
-}
+/*
+#bootInfoIcon { }
+#bootInfoLable { }
+#deviceInfoIcon { }
+#defineInfoLabel { }
+#scrollAreaWidgetContents { }
+#partitionBarView { }
+*/
 
-QWidget {
-	font: 16px;
-}
+/*** Licensing module.
+ *
+ * The licensing module paints individual widgets for each of
+ * the licenses. The item can be collapsed or expanded.
+ */
 
-QTextEdit, QListView {
-}
-QDialogButtonBox {
-}
-QAbstractSpinBox {
-}
-QListWidget::item:alternate {
-}
+/*
+#licenseItem {  }
+#licenseItemFullText {  }
+*/
 
-#view-button-back:hover {
-	color: #58B2D7;
-}
-#view-button-next:hover {
-	color: #58B2D7;
-}
-#view-button-cancel:hover {
-	color: #58B2D7;
-}
+/* Existing styles might be here */
 
-#debugButton {
-	font: bold 8px;
-	color: #FFFFFF;
+/* Package/Module Selection Styles */
+QTreeView {
+    font-size: 14pt;
+    color: #FFFFFF;         /* Text color */
+    padding: 5px;
+    margin: 2px;
 }
-#debugButton:hover {
-	color: #58B2D7;
-}
-
-#aboutButton:hover {
-	color: #58B2D7;
-}
-#donateButton:hover {
-	color: #58B2D7;
-}
-#supportButton:hover {
-	color: #58B2D7;
-}
-#knownIssuesButton:hover {
-	color: #58B2D7;
-}
-#releaseNotesButton:hover {
-	color: #58B2D7;
-}
-
-/* ########## TOOLTIP ########## */
-
-QToolTip {
-	background-color: #58B2D7;
-  font : 16px;
-	color: white;
-	padding: 3px;
-	border: none;
-}
-
-QPushButton {
-    font : 16px;
-}
-
-QDialogButtonBox {
-	dialogbuttonbox-buttons-have-icons: 0;
-}
-
-/* ########## SCROLL BAR ########## */
-
-QScrollBar:vertical {
-     background: #efefef;
-     width: 20px;
-     margin: 38px 0 20px 0;
-}
-
-QScrollBar::handle:vertical {
-     background: #58B2D7;
-     max-height: 25px;
-}
-
-QScrollBar::sub-line:vertical {
-     border: none;
-     background: none;
-     height: 20px;
-     subcontrol-position: top;
-     subcontrol-origin: margin;
-}
-
-QScrollBar::add-line:vertical {
-     border: none;
-     background: none;
-     height: 20px;
-     subcontrol-position: bottom;
-     subcontrol-origin: margin;
-}
-
-/* ########## QLIST VIEW ########## */
 
 QListView {
-		font: 16px;
+    font-size: 14pt;
+    color: #FFFFFF;         /* Text color */
+    padding: 5px;
+    margin: 2px;
 }
-
-QListView::item:alternate {
-	color: #58B2D7;
-	color: white;
-}
-
-QListView::item:!alternate:selected:active {
-	background: #58B2D7;
-	color: white;
-}
-
-QListView::item:selected:active {
-	background: #58B2D7;
-	color: white;
-}
-
-QListView::item:selected:!active {
-	background: #58B2D7;
-	color: white;
-}
-
-QListView::item:hover {
-	background: #58B2D7;
-	color: white;
-}
-
-QListView#listLayout::item:!alternate:selected:active {
-	background: #58B2D7;
-	color: white;
-}
-
-QListView#listVariant::item:!alternate:selected:active {
-	background: #58B2D7;
-	color: white;
-}
-
-
-
-/* ########## QLINE EDIT ########## */
-
-QLineEdit#LE_TestKeyboard {
-	font: 16px;
-}
-
-QLineEdit#m_passphraseLineEdit, QLineEdit#vgName,
-QLineEdit#m_confirmLineEdit {
-	font: 16px;
-}
-
-QLineEdit#textBoxUserVerifiedPassword, QLineEdit#textBoxVerifiedRootPassword {
-	font: 16px;
-}
-
-QLineEdit#textBoxFullName, QLineEdit#textBoxLoginName, QLineEdit#textBoxHostName,
-QLineEdit#textBoxUserPassword, QLineEdit#textBoxRootPassword {
-	font: 16px;
-}
-
-#textBoxFullName, #textBoxLoginName, #textBoxHostName, #textBoxUserPassword,
-#textBoxRootPassword, #textBoxAutoLogin, #vgName {
-	font: 16px;
-}
-
-#textBoxUserVerifiedPassword, #textBoxVerifiedRootPassword,
-#LE_TestKeyboard, #m_confirmLineEdit, #m_passphraseLineEdit {
-	font: 16px;
-}
-
-/* ##########PARTITION ########## */
-
-#partitionLabel {
-}
-
-#partitionLabelsView {
-}
-
-#CreatePartitionDialog {
-}
-
-#partResizerWidget {
-	font: 16px;
-}
-
-/* ########## PAGE_USERSETUP ########## */
-
- #labelWhatIsYourName {
-	font: 16px;
-}
- #textBoxFullName {
-	font: 16px;
-}
- #labelFullName {
-	font: 16px;
-}
- #labelFullNameError {
-	font: 16px;
-}
- #username_label_2 {
-	font: 16px;
-}
- #textBoxLoginName {
-	font: 16px;
-}
- #labelUsername {
-	font: 16px;
-}
- #labelUsernameError {
-	font: 16px;
-}
- #hostname_label_2 {
-	font: 16px;
-}
- #textBoxHostName {
-	font: 16px;
-}
- #labelHostname {
-	font: 16px;
-}
- #labelHostnameError {
-	font: 16px;
-}
- #password_label_2 {
-	font: 16px;
-}
- #textBoxUserPassword {
-	font: 16px;
-}
- #textBoxUserVerifiedPassword {
-	font: 16px;
-}
- #labelUserPassword {
-	font: 16px;
-}
- #labelUserPasswordError {
-	font: 16px;
-}
- #checkBoxRequireStrongPassword {
-	font: 16px;
-}
- #checkBoxDoAutoLogin {
-	font: 16px;
-}
- #checkBoxReusePassword {
-	font: 16px;
-}
- #labelChooseRootPassword {
-	font: 16px;
-}
- #textBoxRootPassword {
-	font: 16px;
-}
- #textBoxVerifiedRootPassword {
-	font: 16px;
-}
- #labelRootPassword {
-	font: 16px;
-}
- #labelRootPasswordError {
-	font: 16px;
-}
-
-/* ########## COMBO BOX ########## */
 
 QComboBox {
-	font: 16px;
+    font-size: 14pt;
+    color: #FFFFFF;         /* Text color */
+    padding: 5px;
+    margin: 2px;
 }
 
-QComboBox::item:selected {
-	background: #58B2D7;
-	color: white;
+/* If you want to specifically target the package selection module */
+#packagechooserq {
+    font-size: 14pt;
+}
+/* User account creation page */
+#textBoxUserName, #textBoxHostName, #textBoxUserPassword, #textBoxRootPassword, #textBoxVerify {
+    font-size: 14pt;
 }
 
-#mountPointComboBox::drop-down {
-	font: 16px;
+/* Labels for the input fields */
+#labelUsername, #labelHostname, #labelUserPassword, #labelUserVerify, #labelRootPassword, #labelRootVerify {
+    font-size: 14pt;
 }
 
-/* ########## SPIN BOX ########## */
-
-QSpinBox {
-	font: 16px;
-}
-
+/* All input fields generally */
 QLineEdit {
-	font: 16px;
+    font-size: 14pt;
+    padding: 5px;
 }
 
-/* ########## TREE VIEW ########## */
-
-QTreeView {
-	font: 16px;
-	show-decoration-selected: 0;
+/* All labels generally */
+QLabel {
+    font-size: 14pt;
 }
 
-QTreeView::item {
-	padding: 2px;
+/* Specific to the users page */
+#usersPage QWidget {
+    font-size: 14pt;
+}
+/* Partition page elements */
+#partitionBarView {
+    font-size: 14pt;
 }
 
-QTreeView::item:selected {
-	background: #58B2D7;
-	font: bold;
+#partitionLabels QLabel {
+    font-size: 14pt;
 }
 
-QTreeView::branch:has-siblings:!adjoins-item {
-}
-QTreeView::branch:has-siblings:adjoins-item {
-}
-QTreeView::branch:!has-children:!has-siblings:adjoins-item {
-}
-QTreeView::branch:has-children:!has-siblings:closed,
-QTreeView::branch:closed:has-children:has-siblings {
-}
-QTreeView::branch:open:has-children:!has-siblings,
-QTreeView::branch:open:has-children:has-siblings  {
+/* Mount point selector and fields */
+#mountPointComboBox {
+    font-size: 14pt;
 }
 
-/* ########## CHECK BOX ########## */
-
-QCheckBox {
-}
-QCheckBox::indicator:unchecked {
-}
-QCheckBox::indicator:checked {
-}
-QItemSelectionModel::Select {
+/* Partition table */
+#partitionTable {
+    font-size: 14pt;
 }
 
-/* ########## HEADER VIEW ########## */
-
-QHeaderView::section {
-  font : 16px;
+/* Device selection dropdown */
+#deviceComboBox {
+    font-size: 14pt;
 }
 
-/* ########## PROGRESS BAR ########## */
-
-QProgressBar {
-	text-align: center;
+/* All partition related buttons and controls */
+#partitionPage QWidget {
+    font-size: 14pt;
 }
 
-QProgressBar::chunk {
-	background-color: #58B2D7;
+/* Specific mount point entries */
+#partitionMountPoint {
+    font-size: 14pt;
 }
 
-#debugButton {
-	font: bold 8px;
-	color: #353945;
-}
-#debugButton:hover {
-	color: #353945;
+/* File system type selector */
+#fileSystemComboBox {
+    font-size: 14pt;
 }

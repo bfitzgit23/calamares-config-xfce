@@ -121,6 +121,46 @@ QComboBox {
     margin: 2px;
 }
 
+
+QCheckBox {
+    spacing: 5px;
+    color: #ffffff;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: transparent;
+}
+
+QCheckBox::indicator:unchecked:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+QCheckBox::indicator:checked {
+    background-color: transparent;
+    image: url(/path/to/check-white.svg);
+}
+
+QCheckBox::indicator:checked:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+QCheckBox::indicator:disabled {
+    border-color: #666666;
+    background-color: transparent;
+}
+
+/* Optional: Style for focused checkboxes */
+QCheckBox::indicator:focus {
+    border: 2px solid #ffffff;
+}
 /* If you want to specifically target the package selection module */
 #packagechooserq {
     font-size: 14pt;
