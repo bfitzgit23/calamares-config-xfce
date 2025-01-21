@@ -201,7 +201,7 @@ QCheckBox::indicator {
     height: 16px;
     border: 2px solid #ffffff;  /* White border */
     border-radius: 3px;
-    background-color: #ffffff;  /* White background */
+    background-color: #000000;  /* White background */
 }
 
 QCheckBox::indicator:unchecked {
