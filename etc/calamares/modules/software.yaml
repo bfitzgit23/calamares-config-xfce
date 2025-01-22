@@ -49,8 +49,8 @@
    - vesktop
    - discord
    - libreoffice
-- name: "Browsers"
-  description: "Browsers"
+- name: "Browsers-vpn"
+  description: "Browsers-vpn"
   critical: false
   hidden: false
   selected: false
@@ -59,6 +59,7 @@
    - google-chrome
    - brave-bin
    - microsoft-edge-stable-bin
+   - torguard
 - name: "VirtualBox"
   description: "Installs VirtualBox"
   critical: false
@@ -81,7 +82,7 @@
     - webapp-manager
     - vlc
     - loupe
-#    - xarchiver
+    - xarchiver
     - timeshift
     - unzip
 #    - pamac-aur-git
@@ -89,7 +90,6 @@
     - gnome-disk-utility
     - seahorse
     - yay-bin
-#    - pamac-aur-git
     - firefox
     - gnome-calculator
     - gnome-system-monitor
