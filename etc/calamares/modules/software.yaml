@@ -85,7 +85,7 @@
     - xarchiver
     - timeshift
     - unzip
-#    - pamac-aur-git
+    - pamac-aur-git
     - gedit
     - gnome-disk-utility
     - seahorse
@@ -94,3 +94,6 @@
     - gnome-calculator
     - gnome-system-monitor
     - wireguard-tools
+    - bluez
+    - bluez-utils
+    - blueman
