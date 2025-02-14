@@ -84,6 +84,7 @@
     - loupe
     - xarchiver
     - timeshift
+    - timeshift-systemd-timer
     - unzip
     - pamac-aur-git
     - gedit
@@ -97,3 +98,4 @@
     - bluez
     - bluez-utils
     - blueman
+
