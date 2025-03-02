@@ -60,6 +60,7 @@
    - brave-bin
    - microsoft-edge-stable-bin
    - torguard
+   - librewolf
 - name: "VirtualBox"
   description: "Installs VirtualBox"
   critical: false
