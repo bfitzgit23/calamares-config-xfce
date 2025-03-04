@@ -71,8 +71,8 @@
     - virtualbox
     - virtualbox-host-dkms
     - virtualbox-guest-utils
-- name: "Acreetoin Loaded Software"
-  description: "Cinnamon Config files"
+- name: "AcreetionOS-XFCE Loaded Software"
+  description: "XFCE Config files"
   critical: false
   hidden: true
   selected: true
@@ -80,23 +80,24 @@
   packages:
     - fastfetch
     - nano 
-    - webapp-manager
     - vlc
     - loupe
     - xarchiver
     - timeshift
-    - timeshift-systemd-timer
     - unzip
-    - pamac-aur-git
-    - gedit
+    - mousepad
     - gnome-disk-utility
-    - seahorse
-    - yay-bin
-    - firefox
-    - gnome-calculator
-    - gnome-system-monitor
-    - wireguard-tools
+    - yay
+    - chromium
+    - xfce4
+    - xfce4-goodies
+    - networkmanager
+    - network-manager-applet
     - bluez
     - bluez-utils
     - blueman
+    - engrampa
+    - axel
+    - bbswitch
+    - acpi_call
 
