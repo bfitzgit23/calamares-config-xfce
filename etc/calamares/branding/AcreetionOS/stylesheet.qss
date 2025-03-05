@@ -205,12 +205,12 @@ QCheckBox::indicator {
 }
 
 QCheckBox::indicator:unchecked {
-    background-color: #0000000;  /* Pure white */
+    background-color: #ffffff;  /* Pure white */
 }
 
 QCheckBox::indicator:unchecked:hover {
-    background-color: #f0f0f0;  /* Slightly darker on hover */
-    border-color: #f0f0f0;
+    background-color: #ffffff;  /* Slightly darker on hover */
+    border-color: #ffffff;
 }
 
 QCheckBox::indicator:checked {
@@ -220,18 +220,18 @@ QCheckBox::indicator:checked {
 }
 
 QCheckBox::indicator:checked:hover {
-    background-color: #f0f0f0;
-    border-color: #f0f0f0;
+    background-color: #ffffff;
+    border-color: #ffffff;
 }
 
 QCheckBox::indicator:disabled {
-    border-color: #000000;
-    background-color: #000000;
+    border-color: #ffffff;
+    background-color: #ffffff;
 }
 
 /* Optional: Style for focused checkboxes */
 QCheckBox::indicator:focus {
-    border-color: #f0f0f0;
+    border-color: #ffffff;
 }
 
 /* Save this as check-black.svg instead of check-white.svg */
