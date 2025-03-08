@@ -1,1 +1,1 @@
-# calamares-configs-stormos
+# calamares-configs-xfce
