@@ -14,8 +14,8 @@ sidebar: qml,top
 strings:
     productName:         StormOS
     shortProductName:    StormOS
-    version:             Vida
-    shortVersion:        Vida
+    version:             Pescado
+    shortVersion:        Pescado
     versionedName:       StormOS
     shortVersionedName:  StormOS
     bootloaderEntryName: StormOS
