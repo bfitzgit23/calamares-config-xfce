@@ -49,18 +49,15 @@
    - vesktop
    - discord
    - libreoffice
-- name: "Browsers-vpn"
-  description: "Browsers-vpn"
+- name: "Browsers"
+  description: "Browsers"
   critical: false
   hidden: false
   selected: false
   expanded: true
   packages:
-   - google-chrome
+   - chromium
    - brave-bin
-   - microsoft-edge-stable-bin
-   - torguard
-   - librewolf
 - name: "VirtualBox"
   description: "Installs VirtualBox"
   critical: false
@@ -71,7 +68,7 @@
     - virtualbox
     - virtualbox-host-dkms
     - virtualbox-guest-utils
-- name: "AcreetionOS-XFCE Loaded Software"
+- name: "StormOS Loaded Software"
   description: "XFCE Config files"
   critical: false
   hidden: true
@@ -80,13 +77,16 @@
   packages:
     - fastfetch
     - nano 
+    - stormos-conf
     - vlc
     - loupe
     - xarchiver
     - timeshift
     - unzip
+    - pamac-all
     - mousepad
     - gnome-disk-utility
+    - compiz-easy-patch
     - yay
     - chromium
     - xfce4
@@ -97,7 +97,9 @@
     - bluez-utils
     - blueman
     - engrampa
+    - adw-gtk-theme-git
+    - mintstick-git
+    - oh-my-bash-git
     - axel
     - bbswitch
     - acpi_call
-

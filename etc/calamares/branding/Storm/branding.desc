@@ -1,5 +1,5 @@
 ---
-componentName:  AcreetionOS
+componentName:  Storm
 
 welcomeStyleCalamares:   false
 
@@ -12,18 +12,18 @@ windowPlacement: center
 sidebar: qml,top
 
 strings:
-    productName:         AcreetionOS
-    shortProductName:    AcreetionOS
-    version:             AcreetionOS
-    shortVersion:        AcreetionOS
-    versionedName:       AcreetionOS
-    shortVersionedName:  AcreetionOS
-    bootloaderEntryName: AcreetionOS
+    productName:         StormOS
+    shortProductName:    StormOS
+    version:             Vida
+    shortVersion:        Vida
+    versionedName:       StormOS
+    shortVersionedName:  StormOS
+    bootloaderEntryName: StormOS
 
 images:
-    productLogo:         "logo.png"
+    productLogo:         "squid.png"
     productIcon:         "logo.png"
-    productWelcome:      "logo.png"
+    productWelcome:      "languages.png"
 
 uploadServer :
     type :    "fiche"
