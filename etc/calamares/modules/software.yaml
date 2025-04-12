@@ -56,8 +56,12 @@
   selected: false
   expanded: true
   packages:
-   - chromium
+   - firefox
    - brave-bin
+   - google-chrome
+   - microsoft-edge-stable-bin
+   - torguard
+   - librewolf
 - name: "VirtualBox"
   description: "Installs VirtualBox"
   critical: false
@@ -86,11 +90,6 @@
     - pamac-all
     - mousepad
     - gnome-disk-utility
-    - compiz-easy-patch
-    - yay
-    - chromium
-    - xfce4
-    - xfce4-goodies
     - networkmanager
     - network-manager-applet
     - bluez
