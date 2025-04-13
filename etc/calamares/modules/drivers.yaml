@@ -1,12 +1,12 @@
 - name: "Kernel 5-15"
-  description: "Older Kernel for older machines"
+  description: "Older Kernel for older nvidia cards"
   critical: false
   hidden: false
   selected: false
   expanded: tue
   packages:
-    - linux-lts515
-    - linux-lts515-headers
+    - linux-lts-515
+    - linux-lts-515-headers
 - name: "Latest Linux Kernel"
   description: "Installs the latest Linux Kernel"
   critical: false
@@ -41,10 +41,9 @@
   selected: false
   expanded: false
   packages:
-    - nvidia
+    - nvidia-dkms
     - nvidia-settings
     - nvidia-utils
-    - nvidia-dkms
     - vulkan-icd-loader
     - lib32-vulkan-icd-loader
     - lib32-nvidia-utils
@@ -59,6 +58,7 @@
     - nvidia-settings
     - nvidia-utils
     - lib32-nvidia-utils
+    - nvidia-390xx-dkms
 - name: "Nvidia for Linux-Zen Kernel"
   description: "Installs nVidia for Linux-Zen"
   critical: false
@@ -66,10 +66,9 @@
   selected: false
   expanded: false
   packages:
-    - nvidia
-    - nvidia-settings
-    - nvidia-utils
     - nvidia-dkms
+    - nvidia-utils
+    - nvidia-settings
     - vulkan-icd-loader
     - lib32-vulkan-icd-loader
     - lib32-nvidia-utils
@@ -107,6 +106,8 @@
   selected: false
   expanded: false
   packages:
+    - intel-media-driver
+    - intel-media-sdk
     - lib32-mesa 
     - vulkan-intel
     - vulkan-icd-loader
