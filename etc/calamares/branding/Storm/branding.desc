@@ -14,8 +14,8 @@ sidebar: qml,top
 strings:
     productName:         StormOS
     shortProductName:    StormOS
-    version:             Pescado
-    shortVersion:        Pescado
+    version:             Familia
+    shortVersion:        Familia
     versionedName:       StormOS
     shortVersionedName:  StormOS
     bootloaderEntryName: StormOS
