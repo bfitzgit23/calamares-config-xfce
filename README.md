@@ -1,12 +1,12 @@
 # calamares-config
 
-# AcreetionOS Calamares Configuration & Boot Fix
+# StormOS Calamares Configuration & Boot Fix
 
-This repository contains the custom Calamares installer configuration files for AcreetionOS, including a crucial post-installation boot fix script.
+This repository contains the custom Calamares installer configuration files for StormOS, including a crucial post-installation boot fix script.
 
 ## Overview
 
-These configuration files and scripts customize the Calamares installer framework for AcreetionOS. The configuration handles partitioning, package installation, system configuration, and includes a specialized post-installation script to ensure proper boot setup.
+These configuration files and scripts customize the Calamares installer framework for StormOS. The configuration handles partitioning, package installation, system configuration, and includes a specialized post-installation script to ensure proper boot setup.
 
 ## Key Components
 
@@ -29,7 +29,7 @@ These configuration files and scripts customize the Calamares installer framewor
 - Detailed logging for troubleshooting
 
 ### Branding
-- `branding/AcreetionOS/` - Custom branding elements
+- `branding/StormOS/` - Custom branding elements
  - `branding.desc` - Branding settings and strings
  - `logo.png` - Distribution logo
  - `show.qml` - Slideshow configuration
