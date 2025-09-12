@@ -2,7 +2,7 @@
 
 # StormOS Calamares Configuration & Boot Fix
 
-This repository contains the custom Calamares installer configuration files for StormOS, including a crucial post-installation boot fix script.
+This repository contains the custom Calamares installer configuration files for StormOS, including a crucial post-installation boot fix script, with help from the great team at AcreetionOS.
 
 ## Overview
 
