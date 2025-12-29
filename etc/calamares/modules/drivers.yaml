@@ -41,7 +41,7 @@
   selected: false
   expanded: false
   packages:
-    - nvidia-dkms
+    - nvidia-open-dkms
     - nvidia-settings
     - nvidia-utils
     - vulkan-icd-loader
@@ -54,7 +54,7 @@
   selected: false
   expanded: false
   packages:
-    - nvidia-lts
+    - nvidia-open-lts
     - nvidia-settings
     - nvidia-utils
     - lib32-nvidia-utils
@@ -66,7 +66,7 @@
   selected: false
   expanded: false
   packages:
-    - nvidia-dkms
+    - nvidia-open-dkms
     - nvidia-utils
     - nvidia-settings
     - vulkan-icd-loader
@@ -79,7 +79,7 @@
   selected: false
   expanded: false
   packages:
-    - nvidia-lts
+    - nvidia-open-lts
     - nvidia-settings
     - nvidia-utils
     - nvidia-dkms
