@@ -29,7 +29,7 @@
   packages:
     - lutris
     - steam
-    - steam-native-runtime
+    - wine-staging
 - name: "Install Other Software"
   description: "Software"
   critical: false
