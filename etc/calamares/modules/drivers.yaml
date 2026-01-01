@@ -7,33 +7,6 @@
   packages:
     - linux-lts-515
     - linux-lts-515-headers
-- name: "Latest Linux Kernel"
-  description: "Installs the latest Linux Kernel"
-  critical: false
-  hidden: false
-  selected: false
-  expanded: true
-  packages:
-    - linux
-    - linux-headers
-- name: "Latest Linux-Lts Kernel"
-  description: "Installs the Linux-Lts Kernel"
-  critical: false
-  hidden: false
-  selected: false
-  expanded: true
-  packages:
-    - linux-lts
-    - linux-lts-headers
-- name: "Latest Linux-Zen Kernel"
-  description: "Installs the linux-zen kernel"
-  critical: false
-  hidden: false
-  selected: false
-  expanded: true
-  packages:
-    - linux-zen
-    - linux-zen-headers
 - name: "Nvidia for latest Linux Kernel"
   description: "Installs nVidia Drivers for Linux"
   critical: false
