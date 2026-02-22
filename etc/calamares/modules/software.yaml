@@ -65,3 +65,13 @@
     - virtualbox
     - virtualbox-host-dkms
     - virtualbox-guest-utils
+- name: "Plasma"
+  description: "Installs KDE Plasma 6 desktop"
+  critical: false
+  hidden: true
+  selected: false
+  expanded: false
+  packages: 
+    - kf6
+    - qt6
+    - plasma-meta
