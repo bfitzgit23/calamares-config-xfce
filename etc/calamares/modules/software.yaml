@@ -68,7 +68,7 @@
 - name: "Plasma"
   description: "Installs KDE Plasma 6 desktop"
   critical: false
-  hidden: true
+  hidden: false
   selected: false
   expanded: false
   packages: 
