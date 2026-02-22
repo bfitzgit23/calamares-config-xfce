@@ -58,7 +58,7 @@
 - name: "VirtualBox"
   description: "Installs VirtualBox"
   critical: false
-  hidden: true
+  hidden: false
   selected: false
   expanded: false
   packages: 
