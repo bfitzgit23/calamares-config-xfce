@@ -1,6 +1,41 @@
 # Calamares Configuration Fixes - StormOS
 
-## Issue 1: Reboot goes into liveuser instead of installed system
+## Issue 1: User is set as "liveuser" instead of created user
+
+### Problem
+After installation completes, the user is logged in as "liveuser" instead of the username they created during the Calamares installation.
+
+### Root Cause Analysis
+The `lightdm.conf` file has `autologin-user=liveuser` hardcoded. After installation, the LightDM display manager still tries to autologin as the liveuser account which should have been removed.
+
+### Solution Applied
+**postinstall.sh (in install-stormos-xfce)**:
+```bash
+# Fix LightDM autologin to use the correct user
+LIGHTDM_CONF="$TARGET_ROOT/etc/lightdm/lightdm.conf"
+if [ -f "$LIGHTDM_CONF" ]; then
+    # Remove existing autologin-user line
+    sed -i '/^autologin-user=/d' "$LIGHTDM_CONF"
+    # Add correct autologin user after autologin-guest line
+    sed -i "/^autologin-guest=/a autologin-user=$USER_NAME" "$LIGHTDM_CONF"
+    echo "✓ LightDM autologin set to: $USER_NAME"
+fi
+
+# Fix getty autologin for console login
+for conf in "$TARGET_ROOT/etc/systemd/system/getty@"*.service.d/*.conf; do
+    if [ -f "$conf" ]; then
+        sed -i "s|--autologin liveuser|--autologin $USER_NAME|g" "$conf"
+    fi
+done
+```
+
+**lightdm.conf**:
+- Removed hardcoded `autologin-user=liveuser` from the template
+- Now uses comment placeholder: `# autologin-user will be set by postinstall.sh`
+
+---
+
+## Issue 2: Reboot goes into liveuser instead of installed system
 
 ### Problem
 After installation completes, the system reboots into the liveuser account instead of booting from the installed StormOS system.
@@ -34,7 +69,7 @@ The bootloader configuration may not be properly:
 
 ---
 
-## Issue 2: White Flashing Before Calamares Loads
+## Issue 3: White Flashing Before Calamares Loads
 
 ### Problem
 A white flash appears before Calamares loads and during transitions between screens.
@@ -69,7 +104,7 @@ style:
 
 ---
 
-## Issue 3: Theming/Branding Not Applied Correctly
+## Issue 4: Theming/Branding Not Applied Correctly
 
 ### Problem
 The Calamares dark theme and StormOS branding are not displaying correctly.
