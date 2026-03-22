@@ -1,40 +1,61 @@
 ---
+# StormOS Branding Configuration for Calamares
+# Defines the appearance and behavior of the Calamares installer
+
 componentName:  Storm
 
+# Disable Calamares built-in welcome styling to use custom branding
 welcomeStyleCalamares:   false
 
+# Show expanding logo in welcome screen
 welcomeExpandingLogo:   true
 
+# Window settings - prevent white flash by setting explicit size
 windowExpanding:    noexpand
 windowSize: 1280px,720px
 windowPlacement: center
 
+# Sidebar position and style
 sidebar: qml,top
 
+# Text strings for the installer
 strings:
     productName:         StormOS
     shortProductName:    StormOS
     version:             Familia
     shortVersion:        Familia
-    versionedName:       StormOS
+    versionedName:       StormOS Familia
     shortVersionedName:  StormOS
     bootloaderEntryName: StormOS
 
+# Images for branding
 images:
     productLogo:         "squid.png"
     productIcon:         "logo.png"
     productWelcome:      "languages.png"
 
-uploadServer :
-    type :    "fiche"
-    url :     "http://termbin.com:9999"
-    sizeLimit : -1
-
+# Slideshow configuration
 slideshow:               "show.qml"
-
 slideshowAPI: 1
 
+# Style configuration - dark theme colors
 style:
-   SidebarBackground:    "#31313a"
-   SidebarText:          "#FFFFFF"
-   SidebarBackgroundCurrent: "#ebe0c9"
+    # Sidebar background - matches QWidget background
+    SidebarBackground:    "#252527"
+    SidebarText:          "#ffffff"
+    
+    # Selected item in sidebar
+    SidebarBackgroundCurrent: "#2d2d30"
+    
+    # Accent color for buttons and highlights
+    SidebarTextCurrent: "#ffffff"
+    
+    # Navigation buttons
+    SidebarButtonBackground: "#38383b"
+    SidebarButtonText: "#ffffff"
+
+# Upload server (for support logs)
+uploadServer:
+    type:    "fiche"
+    url:     "http://termbin.com:9999"
+    sizeLimit : -1
