@@ -1,12 +1,3 @@
-- name: "Kernel 5-15"
-  description: "Older Kernel for older nvidia cards"
-  critical: false
-  hidden: false
-  selected: false
-  expanded: tue
-  packages:
-    - linux-lts-515
-    - linux-lts-515-headers
 - name: "NVIDIA Open Driver (Newer GPUs)"
   description: "Open-source NVIDIA kernel module with DKMS support"
   critical: false
