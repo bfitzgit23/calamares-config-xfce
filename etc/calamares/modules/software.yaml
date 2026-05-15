@@ -43,18 +43,6 @@
    - vesktop
    - discord
    - libreoffice
-- name: "Browsers-vpn"
-  description: "Browsers-vpn"
-  critical: false
-  hidden: false
-  selected: false
-  expanded: false
-  packages:
-   - google-chrome
-   - brave-bin
-   - microsoft-edge-stable-bin
-   - torguard
-   - librewolf
 - name: "VirtualBox"
   description: "Installs VirtualBox"
   critical: false
