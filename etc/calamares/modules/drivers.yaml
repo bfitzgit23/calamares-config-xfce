@@ -62,7 +62,7 @@
   critical: false
   hidden: false
   selected: false
-  expanded: true
+  expanded: false
   packages:
     - intel-ucode
 - name: "Amd-ucode (microcode)"
@@ -70,6 +70,6 @@
   critical: false
   hidden: false
   selected: false
-  expanded: true
+  expanded: false
   packages:
     - amd-ucode
