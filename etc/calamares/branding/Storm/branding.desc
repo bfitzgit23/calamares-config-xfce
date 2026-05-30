@@ -24,7 +24,7 @@ strings:
     shortProductName:    StormOS
     version:             Familia
     shortVersion:        Familia
-    versionedName:       StormOS Familia
+    versionedName:       StormOS
     shortVersionedName:  StormOS
     bootloaderEntryName: StormOS
 
